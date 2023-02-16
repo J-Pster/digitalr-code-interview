@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Select.scss";
 import { RegisterOptions } from "react-hook-form";
 
@@ -22,7 +22,11 @@ const Select = ({
   id,
   vals,
 }: SelectProps) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(1);
+
+  useEffect(() => {
+    set(id, value);
+  }, []);
 
   const handleChange = (event: any) => {
     const newValue = event.target.value;

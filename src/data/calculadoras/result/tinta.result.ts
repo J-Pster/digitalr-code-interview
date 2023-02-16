@@ -63,5 +63,10 @@ export const resultTinta: Result = {
       titulo: "Latas de 0,5 litros",
       format: "ink-bkt",
     },
+    {
+      id: "latas-de-0-5-rest",
+      titulo: "Valor Restante",
+      format: "ml",
+    },
   ],
 };
