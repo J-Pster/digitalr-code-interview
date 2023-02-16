@@ -4,7 +4,7 @@ export const latasDeTinta: Pergunta[] = [
   {
     id: "nomeDoProjeto",
     validations: { required: true },
-    titulo: "Qual o nome do seu projeto?",
+    titulo: "Qual o nome desse cômodo?",
     format: "text",
   },
   {
@@ -35,6 +35,24 @@ export const latasDeTinta: Pergunta[] = [
     id: "select01",
     validations: { required: true },
     titulo: "Quantas janelas/portas tem na parede 01?",
+    format: "inSquareSelect",
+  },
+  {
+    id: "select02",
+    validations: { required: true },
+    titulo: "Quantas janelas/portas tem na parede 02?",
+    format: "inSquareSelect",
+  },
+  {
+    id: "select03",
+    validations: { required: true },
+    titulo: "Quantas janelas/portas tem na parede 03?",
+    format: "inSquareSelect",
+  },
+  {
+    id: "select04",
+    validations: { required: true },
+    titulo: "Quantas janelas/portas tem na parede 04?",
     format: "inSquareSelect",
   },
 ];

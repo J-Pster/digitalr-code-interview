@@ -8,15 +8,15 @@ const inSquareSelect = ({
   hooks: { errors, register, watch, getValues, setValue },
   pergunta,
 }: FormatProps) => {
-  const janelas = watch(pergunta.id + "1") || 0;
-  const portas = watch(pergunta.id + "2") || 0;
+  const janelas = watch(pergunta.id + "jan") || 0;
+  const portas = watch(pergunta.id + "por") || 0;
 
   const { titulo } = pergunta;
   const digitsArr = titulo.match(/\d+/g);
   const digits = digitsArr ? digitsArr[0] : "";
 
-  const paredeAltura = getValues(`parede${digits}1`);
-  const paredeLargura = getValues(`parede${digits}2`);
+  const paredeAltura = getValues(`parede${digits}alt`);
+  const paredeLargura = getValues(`parede${digits}larg`);
   const paredeArea = Math.round(paredeAltura * paredeLargura * 100) / 100;
 
   const areaPortas = parseInt(portas) * 2.4;
@@ -55,7 +55,7 @@ const inSquareSelect = ({
             errors,
             setValue,
           }}
-          id={pergunta.id + "1"}
+          id={pergunta.id + "jan"}
           vals={pergunta.validations}
         />
         <Select
@@ -74,7 +74,7 @@ const inSquareSelect = ({
             errors,
             setValue,
           }}
-          id={pergunta.id + "2"}
+          id={pergunta.id + "por"}
           vals={pergunta.validations}
         />
       </div>

@@ -8,10 +8,10 @@ const sumSquare = ({
   pergunta,
 }: FormatProps) => {
   // Validanto a resposta
-  const [x1, x2] = [watch(pergunta.id + "1"), watch(pergunta.id + "2")];
+  const [x1, x2] = [watch(pergunta.id + "alt"), watch(pergunta.id + "larg")];
   const [x1Valid, x2Valid] = [
-    errors[pergunta.id + "1"] ? false : true,
-    errors[pergunta.id + "2"] ? false : true,
+    errors[pergunta.id + "alt"] ? false : true,
+    errors[pergunta.id + "larg"] ? false : true,
   ];
   const [x1Value, x2Value] = [
     x1Valid ? parseFloat(x1) : 0,
@@ -35,7 +35,7 @@ const sumSquare = ({
       <div className="sumSquare">
         <Input
           hooks={{ register, errors }}
-          id={pergunta.id + "1"}
+          id={pergunta.id + "alt"}
           placeholder="x"
           style={{
             input: { width: "80px" },
@@ -49,7 +49,7 @@ const sumSquare = ({
         <h2>*</h2>
         <Input
           hooks={{ register, errors }}
-          id={pergunta.id + "2"}
+          id={pergunta.id + "larg"}
           placeholder="x"
           style={{
             input: { width: "80px" },
