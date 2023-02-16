@@ -1,4 +1,10 @@
 .caixa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .2rem;
+
   border-radius: 8px;
   border: 1px solid transparent;
   padding: .3rem 1.2rem;
@@ -9,6 +15,8 @@
   transition: border-color 0.25s;
   cursor: pointer;
   user-select: none;
+
+  margin: 0;
 
   min-width: 120px;
 
