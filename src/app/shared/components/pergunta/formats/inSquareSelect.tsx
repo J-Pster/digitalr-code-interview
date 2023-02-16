@@ -23,6 +23,7 @@ const inSquareSelect = ({
   const areaJanelas = parseInt(janelas) * 1.52;
 
   const areaJanelaPorta = areaPortas + areaJanelas;
+  setValue(pergunta.id, areaJanelaPorta);
 
   const result = areaJanelaPorta > paredeArea * 0.5 ? true : false;
 
@@ -77,6 +78,7 @@ const inSquareSelect = ({
           id={pergunta.id + "por"}
           vals={pergunta.validations}
         />
+        <input {...register(pergunta.id, pergunta.validations)} type="hidden" />
       </div>
       {errors[pergunta.id] && (
         <p className="error">

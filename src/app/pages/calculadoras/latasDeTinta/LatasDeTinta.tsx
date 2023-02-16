@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import "./LatasDeTinta.scss";
-import { latasDeTinta } from "../../../../data/calculadoras/calculos/tinta";
+import { stepsTinta } from "../../../../data/calculadoras/steps/tinta.steps";
 import { Pergunta } from "../../../shared/components";
 
 const LatasDeTinta = () => {
@@ -22,13 +22,13 @@ const LatasDeTinta = () => {
 
   // State
   const [step, setStep] = useState(0);
-  const maxStep = latasDeTinta.length - 1;
+  const maxStep = stepsTinta.length - 1;
 
   const handleOkay = () => {
-    trigger(latasDeTinta[step].id).then((res) => {
+    trigger(stepsTinta[step].id).then((res) => {
       if (!res) return;
 
-      if (errors[latasDeTinta[step].id]) return;
+      if (errors[stepsTinta[step].id]) return;
 
       if (step === maxStep) {
         handleSubmit(onSubmit)();
@@ -42,10 +42,11 @@ const LatasDeTinta = () => {
   return (
     <div>
       <Pergunta
-        key={latasDeTinta[step].id}
-        pergunta={latasDeTinta[step]}
+        key={stepsTinta[step].id}
+        pergunta={stepsTinta[step]}
         hooks={{ register, watch, getValues, setValue, errors, handleOkay }}
         step={step}
+        buttonText={step === maxStep ? "Calcular 🔣" : "Próximo ✔️"}
       />
     </div>
   );

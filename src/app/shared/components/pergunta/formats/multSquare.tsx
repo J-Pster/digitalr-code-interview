@@ -3,8 +3,8 @@ import { FormatProps } from "src/app/types/Formats.type";
 
 import "./formats.scss";
 
-const sumSquare = ({
-  hooks: { errors, register, watch },
+const multSquare = ({
+  hooks: { errors, register, watch, setValue },
   pergunta,
 }: FormatProps) => {
   // Validanto a resposta
@@ -21,6 +21,7 @@ const sumSquare = ({
   const result = Math.round((x1Value * x2Value || 0) * 100) / 100;
 
   result < 1 || result > 50 ? true : false;
+  setValue(pergunta.id, result);
 
   const minHeigth = x1Value < 2.2 ? true : false;
 
@@ -61,6 +62,7 @@ const sumSquare = ({
           label="Largura"
         />
         <h2>= {result} m²</h2>
+        <input type="hidden" {...register(pergunta.id, pergunta.validations)} />
       </div>
       {errors[pergunta.id] && (
         <p className="error">
@@ -72,4 +74,4 @@ const sumSquare = ({
   );
 };
 
-export default sumSquare;
+export default multSquare;

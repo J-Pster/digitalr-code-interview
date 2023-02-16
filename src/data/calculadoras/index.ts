@@ -1,29 +1,57 @@
-import { latasDeTinta } from "./calculos/tinta";
+import { Pergunta } from "src/app/types/Pergunta.type";
+import { Calc, calcsTinta } from "./calcs/tinta.calcs";
+import { stepsTinta } from "./steps/tinta.steps";
+import { Result, resultTinta } from "./result/tinta.result";
 
-export const calculadoras = [
+export interface Calculadora {
+  name: string;
+  path: string;
+  steps: Pergunta[];
+  calcs: Calc[];
+  result: Result;
+}
+
+export const calculadoras: Calculadora[] = [
   {
     name: "Latas de Tinta",
     path: "latas-de-tinta",
-    steps: latasDeTinta,
+    steps: stepsTinta,
+    calcs: calcsTinta,
+    result: resultTinta,
   },
   {
     name: "Tijolos",
     path: "tijolos",
+    steps: stepsTinta,
+    calcs: calcsTinta,
+    result: resultTinta,
   },
   {
     name: "Argamassa",
     path: "argamassa",
+    steps: stepsTinta,
+    calcs: calcsTinta,
+    result: resultTinta,
   },
   {
     name: "Concreto",
     path: "concreto",
+    steps: stepsTinta,
+    calcs: calcsTinta,
+    result: resultTinta,
   },
   {
     name: "Pisos",
     path: "pisos",
+    steps: stepsTinta,
+    calcs: calcsTinta,
+    result: resultTinta,
   },
   {
     name: "Telhados",
     path: "telhados",
+    steps: stepsTinta,
+    calcs: calcsTinta,
+    result: resultTinta,
   },
 ];

@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { Error } from "../pages";
 import { Calculadoras, LatasDeTinta } from "../pages/calculadoras";
+import Form from "../pages/form/Form";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/calculadoras/latas-de-tinta",
-    element: <LatasDeTinta />,
+    element: <Form />,
   },
 ]);
 

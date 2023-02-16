@@ -41,7 +41,7 @@ const Select = ({
             </option>
           ))}
         </select>
-        <input {...register(id, vals)} style={{ display: "none" }} />
+        <input {...register(id, vals)} type="hidden" />
       </div>
     </div>
   );

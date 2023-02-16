@@ -5,6 +5,7 @@ import "./Pergunta.scss";
 interface PerguntaProps {
   step: number;
   pergunta: Pergunta;
+  buttonText: string;
   hooks: {
     register: any;
     watch: any;
@@ -18,6 +19,7 @@ interface PerguntaProps {
 const Pergunta = ({
   pergunta,
   step,
+  buttonText,
   hooks: { register, watch, errors, getValues, setValue, handleOkay },
 }: PerguntaProps) => {
   const handleKeyDown = (e: any) => {
@@ -39,7 +41,7 @@ const Pergunta = ({
       ) : (
         <div>Formato não suportado!</div>
       )}
-      <button onClick={handleOkay}>Okay ✔️</button>
+      <button onClick={handleOkay}>{buttonText}</button>
     </div>
   );
 };

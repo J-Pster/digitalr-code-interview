@@ -1,11 +1,11 @@
 import text from "./text";
-import sumSquare from "./sumSquare";
+import multSquare from "./multSquare";
 import inSquareSelect from "./inSquareSelect";
 
 const formats: any = {
   text,
   inSquareSelect,
-  sumSquare,
+  multSquare,
 };
 
 export default formats;
