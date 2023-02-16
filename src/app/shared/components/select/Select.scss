@@ -47,6 +47,11 @@
       &::-ms-expand {
         display: none;
       }
+
+      @media (prefers-color-scheme: light) {
+          background-color: #f2f2f2;
+          color: #6d6d72;
+      }
     }
 
     div {

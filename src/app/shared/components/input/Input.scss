@@ -43,6 +43,17 @@
 
       right: 5px;
     }
+
+    @media (prefers-color-scheme: light) {
+      input[type="text"] {
+        background-color: #f2f2f2;
+        color: #6d6d72;
+      }
+
+      #suffix {
+        background-color: #e2e2e2;
+      }
+    }
   }
 
   p {

@@ -26,7 +26,7 @@ const Input = ({
           placeholder={placeholder}
           {...register(id, vals)}
         />
-        {suffix && <div>{suffix}</div>}
+        {suffix && <div id="suffix">{suffix}</div>}
       </div>
       {showErrors && errors[id] && <p>Input inválido!</p>}
     </div>
