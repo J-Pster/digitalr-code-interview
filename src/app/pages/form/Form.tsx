@@ -13,7 +13,6 @@ const Form = () => {
   const location = useLocation();
   const { pathname } = location;
   const path = pathname.split("/")[2];
-  console.log(path);
 
   // Use Effect State Load
   const [step, setStep] = useState(0);
@@ -39,7 +38,7 @@ const Form = () => {
     mode: "onChange",
   });
   const onSubmit = (data: any) => {
-    console.log(data);
+    console.table(data);
     setFormValues(data);
     setShowResult(true);
   };

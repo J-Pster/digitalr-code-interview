@@ -13,7 +13,7 @@ const Input = ({
   showErrors,
   label,
 }: InputProps) => {
-  console.log(errors);
+  console.warn(errors);
 
   return (
     <div className="native-input" style={style.inputRoot}>

@@ -1,0 +1,35 @@
+.resultBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  border-radius: 8px;
+  border: 2px solid #6b6b6b;
+  padding: 1.8rem 1.2rem;
+  gap: 2rem;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    h3, p {
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+#result {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+
+  width: fit-content;
+  margin: 0;
+}

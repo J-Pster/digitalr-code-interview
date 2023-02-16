@@ -2,8 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
 import { Error } from "../pages";
-import { Calculadoras, LatasDeTinta } from "../pages/calculadoras";
-import Form from "../pages/form/Form";
+import { Calculadoras } from "../pages/calculadoras";
+
+import { calculadorasRoutes } from "./calculadoras";
 
 const router = createBrowserRouter([
   {
@@ -16,10 +17,7 @@ const router = createBrowserRouter([
     path: "/calculadoras",
     element: <Calculadoras />,
   },
-  {
-    path: "/calculadoras/latas-de-tinta",
-    element: <Form />,
-  },
+  ...calculadorasRoutes,
 ]);
 
 export default router;

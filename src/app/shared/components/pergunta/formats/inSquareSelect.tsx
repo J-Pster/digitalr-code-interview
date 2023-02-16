@@ -42,14 +42,14 @@ const inSquareSelect = ({
       <div className="inSquareSelect">
         <Select
           options={[
-            { value: "1", label: "Nela tem 1 Porta" },
-            { value: "2", label: "Nela tem 2 Portas" },
-            { value: "3", label: "Nela tem 3 Portas" },
-            { value: "4", label: "Nela tem 4 Portas" },
-            { value: "5", label: "Nela tem 5 Portas" },
-            { value: "6", label: "Nela tem 6 Portas" },
-            { value: "7", label: "Nela tem 7 Portas" },
-            { value: "8", label: "Nela tem 8 Portas" },
+            { value: "1", label: "Nela tem 1 Porta 🚪" },
+            { value: "2", label: "Nela tem 2 Portas 🚪" },
+            { value: "3", label: "Nela tem 3 Portas 🚪" },
+            { value: "4", label: "Nela tem 4 Portas 🚪" },
+            { value: "5", label: "Nela tem 5 Portas 🚪" },
+            { value: "6", label: "Nela tem 6 Portas 🚪" },
+            { value: "7", label: "Nela tem 7 Portas 🚪" },
+            { value: "8", label: "Nela tem 8 Portas 🚪" },
           ]}
           hooks={{
             register,
@@ -61,14 +61,14 @@ const inSquareSelect = ({
         />
         <Select
           options={[
-            { value: "1", label: "Nela tem 1 Janela" },
-            { value: "2", label: "Nela tem 2 Janelas" },
-            { value: "3", label: "Nela tem 3 Janelas" },
-            { value: "4", label: "Nela tem 4 Janelas" },
-            { value: "5", label: "Nela tem 5 Janelas" },
-            { value: "6", label: "Nela tem 6 Janelas" },
-            { value: "7", label: "Nela tem 7 Janelas" },
-            { value: "8", label: "Nela tem 8 Janelas" },
+            { value: "1", label: "Nela tem 1 Janela 🪟" },
+            { value: "2", label: "Nela tem 2 Janelas 🪟" },
+            { value: "3", label: "Nela tem 3 Janelas 🪟" },
+            { value: "4", label: "Nela tem 4 Janelas 🪟" },
+            { value: "5", label: "Nela tem 5 Janelas 🪟" },
+            { value: "6", label: "Nela tem 6 Janelas 🪟" },
+            { value: "7", label: "Nela tem 7 Janelas 🪟" },
+            { value: "8", label: "Nela tem 8 Janelas 🪟" },
           ]}
           hooks={{
             register,
