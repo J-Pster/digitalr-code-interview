@@ -1,11 +1,29 @@
+// Cores Padrão do Projeto
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  // Tema claro
+  --branco-claro: #ffffff;
+  --link-claro: #747bff;
+  --texto-claro: #213547;
+  --back-botao-claro: #f9f9f9;
+
+  // Tema Escuro
+  --branco-escuro: rgba(255, 255, 255, 0.87);
+  --cinza-escuro: #242424;
+  --back-botao-escuro: #1a1a1a;
+  --texto-escuro: #646cff;
+  --link-escuro: #535bf2;
+}
+
+// Outros Estilos Principais
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--branco-escuro);
+  background-color: var(--cinza-escuro);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,11 +34,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--texto-escuro);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--link-escuro);
 }
 
 body {
@@ -43,12 +61,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--back-botao-escuro);
   cursor: pointer;
   transition: border-color 0.25s;
 
   &:hover {
-    border-color: #646cff;
+    border-color: var(--texto-escuro);
   }
 
   &:focus, &:focus-visible {
@@ -58,13 +76,13 @@ button {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--texto-claro);
+    background-color: var(--branco-claro);
   }
   a:hover {
-    color: #747bff;
+    color: var(--link-claro);
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--back-botao-claro);
   }
 }

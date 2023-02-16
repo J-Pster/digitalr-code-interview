@@ -1,0 +1,16 @@
+.calcs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.caixas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+
+  gap: 1rem;
+  width: 80%;
+}

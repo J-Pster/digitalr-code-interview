@@ -1,0 +1,9 @@
+.logo {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
