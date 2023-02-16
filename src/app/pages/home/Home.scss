@@ -1,15 +1,33 @@
 .logo {
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
   user-select: none;
-
-  &:hover {
-    transform: scale(1.1);
-  }
+  pointer-events: none;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: fit-content;
+  cursor: pointer;
+}
+
+.text-container {
+  position: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  cursor: pointer;
+
+  bottom: 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
 }
