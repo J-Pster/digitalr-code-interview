@@ -1,27 +1,43 @@
 import { Pergunta } from "src/app/types/Pergunta.type";
-import Input from "../input/Input";
+import Formats from "./formats";
 import "./Pergunta.scss";
-import { useState } from "react";
 
 interface PerguntaProps {
   step: number;
   pergunta: Pergunta;
+  hooks: {
+    register: any;
+    watch: any;
+    errors: any;
+    handleOkay: () => void;
+  };
 }
 
-const Pergunta = ({ pergunta, step }: PerguntaProps) => {
-  const [resposta, setResposta] = useState<string>();
-
-  const handleChange = (value: string) => {
-    setResposta(value);
+const Pergunta = ({
+  pergunta,
+  step,
+  hooks: { register, watch, errors, handleOkay },
+}: PerguntaProps) => {
+  const handleKeyDown = (e: any) => {
+    if (e.key === "Enter") {
+      handleOkay();
+    }
   };
 
   return (
-    <div>
+    <div onKeyDown={handleKeyDown}>
       <h3 id="titulo">
         <span id="step">{step}.</span> {pergunta.titulo}
       </h3>
-      <Input onChange={handleChange} />
-      <button>Okay ✔️</button>
+      {Formats[pergunta.format] ? (
+        Formats[pergunta.format]({
+          pergunta,
+          hooks: { register, errors, watch },
+        })
+      ) : (
+        <div>Formato não suportado!</div>
+      )}
+      <button onClick={handleOkay}>Okay ✔️</button>
     </div>
   );
 };

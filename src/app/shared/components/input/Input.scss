@@ -4,10 +4,53 @@
   margin: 0;
   padding: 0;
 
-  label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #6d6d72;
+  gap: 5px;
+
+  width: fit-content;
+
+  #internal-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+
+    gap: 0;
+    margin: 0;
+    padding: 0;
+
+    width: fit-content;
+
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #6d6d72;
+
+      position: absolute;
+      top: -20px;
+      left: 5px;
+    }
+
+    div {
+      background-color: #838383;
+      width: fit-content;
+      margin: 0;
+      padding: 2px 5px;
+
+      border-radius: 6px;
+      position: absolute;
+
+      right: 5px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+
+    margin-left: 5px;
+    color: #bdbdbd;
   }
 
   input[type="text"] {
@@ -19,8 +62,6 @@
     color: #bdbdbd;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
-
-    width: 100%;
 
     &:focus {
       outline: none;
