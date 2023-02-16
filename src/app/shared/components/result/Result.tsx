@@ -1,4 +1,6 @@
-import React, { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback, useState } from "react";
+import { motion } from "framer-motion";
+
 import { Calc } from "src/data/calculadoras/calcs/tinta.calcs";
 import { Result } from "src/data/calculadoras/result/tinta.result";
 
@@ -36,7 +38,11 @@ const Result = ({ calcs, result, form }: ResultProps) => {
   if (!calculus) return <div>Carregando...</div>;
 
   return (
-    <div>
+    <motion.div
+      className="result"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <h2>{result.titulo}</h2>
       {FieldsFormats[result.fieldType] ? (
         FieldsFormats[result.fieldType]({ calculus, result })
@@ -49,7 +55,7 @@ const Result = ({ calcs, result, form }: ResultProps) => {
         <div>Formato de results não suportado!</div>
       )}
       <button onClick={handleBack}>Voltar 🧮 </button>
-    </div>
+    </motion.div>
   );
 };
 

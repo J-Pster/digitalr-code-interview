@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { useLocation } from "react-router-dom";
 import { Pergunta } from "../../shared/components";
 
+import { motion } from "framer-motion";
+
 import "./Form.scss";
 
 import { Calculadora, calculadoras } from "../../../data/calculadoras";
@@ -78,7 +80,12 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <motion.div
+      key={step}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Pergunta
         key={steps[step].id}
         pergunta={steps[step]}
@@ -86,7 +93,7 @@ const Form = () => {
         step={step}
         buttonText={step === maxStep ? "Calcular 🔣" : "Próximo ✔️"}
       />
-    </div>
+    </motion.div>
   );
 };
 

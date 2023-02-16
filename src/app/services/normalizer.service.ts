@@ -11,6 +11,7 @@ const formats: { [key: string]: string } = {
 
 const valueCalcs: { [key: string]: string } = {
   ml: "(value * 1000).toFixed(0)",
+  liter: "value.toFixed(2)",
 };
 
 const resultValueNormalizer = (result: FormatNormalizer): string => {
