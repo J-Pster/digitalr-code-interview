@@ -1,0 +1,39 @@
+.caixa {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: .3rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--back-botao-escuro);
+  transition: border-color 0.25s;
+  cursor: pointer;
+  user-select: none;
+
+  min-width: 120px;
+
+  width: fit-content;
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    color: #c9c9c9;
+  }
+
+  &:hover {
+    border-color: var(--texto-escuro);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .caixa {
+    background-color: var(--back-botao-claro);
+  }
+
+  .caixa p {
+    color: #858585;
+  }
+}
