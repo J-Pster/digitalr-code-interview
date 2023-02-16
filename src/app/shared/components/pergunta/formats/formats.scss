@@ -12,6 +12,18 @@
   margin-top: 10px;
 }
 
+.inSquareSelect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+
+  gap: 10px;
+}
+
 .error {
   margin: 0;
   padding: 0;
@@ -19,6 +31,17 @@
   color: #7e7e7e;
   font-size: 14px;
   font-weight: 600;
+}
+
+.descritivo-de-parede {
+  margin: 0;
+  padding: 0;
+
+  color: #afafaf;
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-left: 3px;
 }
 
 h2 {

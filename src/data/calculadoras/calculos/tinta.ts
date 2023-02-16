@@ -31,4 +31,10 @@ export const latasDeTinta: Pergunta[] = [
     titulo: "Qual a área da parede 04 de 04?",
     format: "sumSquare",
   },
+  {
+    id: "select01",
+    validations: { required: true },
+    titulo: "Quantas janelas/portas tem na parede 01?",
+    format: "inSquareSelect",
+  },
 ];

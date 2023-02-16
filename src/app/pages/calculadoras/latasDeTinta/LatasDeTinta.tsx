@@ -12,6 +12,8 @@ const LatasDeTinta = () => {
     handleSubmit,
     watch,
     trigger,
+    getValues,
+    setValue,
     formState: { errors },
   } = useForm({
     mode: "onChange",
@@ -25,6 +27,8 @@ const LatasDeTinta = () => {
   const handleOkay = () => {
     trigger(latasDeTinta[step].id).then((res) => {
       if (!res) return;
+
+      if (errors[latasDeTinta[step].id]) return;
 
       if (step === maxStep) {
         handleSubmit(onSubmit)();
@@ -40,7 +44,7 @@ const LatasDeTinta = () => {
       <Pergunta
         key={latasDeTinta[step].id}
         pergunta={latasDeTinta[step]}
-        hooks={{ register, watch, errors, handleOkay }}
+        hooks={{ register, watch, getValues, setValue, errors, handleOkay }}
         step={step}
       />
     </div>

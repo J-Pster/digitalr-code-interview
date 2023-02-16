@@ -6,5 +6,7 @@ export interface FormatProps {
     register: any;
     errors: any;
     watch: any;
+    getValues: any;
+    setValue: any;
   };
 }

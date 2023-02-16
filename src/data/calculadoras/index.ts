@@ -1,7 +1,10 @@
+import { latasDeTinta } from "./calculos/tinta";
+
 export const calculadoras = [
   {
     name: "Latas de Tinta",
     path: "latas-de-tinta",
+    steps: latasDeTinta,
   },
   {
     name: "Tijolos",

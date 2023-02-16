@@ -8,7 +8,9 @@ interface PerguntaProps {
   hooks: {
     register: any;
     watch: any;
+    getValues: any;
     errors: any;
+    setValue: any;
     handleOkay: () => void;
   };
 }
@@ -16,7 +18,7 @@ interface PerguntaProps {
 const Pergunta = ({
   pergunta,
   step,
-  hooks: { register, watch, errors, handleOkay },
+  hooks: { register, watch, errors, getValues, setValue, handleOkay },
 }: PerguntaProps) => {
   const handleKeyDown = (e: any) => {
     if (e.key === "Enter") {
@@ -32,7 +34,7 @@ const Pergunta = ({
       {Formats[pergunta.format] ? (
         Formats[pergunta.format]({
           pergunta,
-          hooks: { register, errors, watch },
+          hooks: { register, errors, watch, getValues, setValue },
         })
       ) : (
         <div>Formato não suportado!</div>
