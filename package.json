@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down --remove-orphans"
   },
   "dependencies": {
     "framer-motion": "^9.0.4",
