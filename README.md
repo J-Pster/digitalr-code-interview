@@ -15,6 +15,8 @@ Você pode visualizar o projeto na [Vercel](https://digitalr-code-interview.verc
 
 ## 📝 Sobre o projeto
 
+Veja meu [vídeo de introdução](https://www.youtube.com/watch?v=cRIQ4bvO9B0)!
+
 O projeto foi desenvolvido com **ReactJS** e **Typescript** com **Vite**, todos os componentes e estilos foram criados por mim, para animações eu utilizei a biblioteca **Framer Motion**, para gerenciamento dos forms usei o **React Hook Form**.
 
 ### **Por quês?** 🤔
@@ -78,3 +80,12 @@ Porém, se eu fosse fazer os testes, eu usaria o **Jest** e o **React Testing Li
 Mas também criaria testes pesados em cima dos services, principalmente o `calculadoras.service.ts` que é quem faz os cálculos matemáticos.
 
 E eu usaria o **Cypress** para os testes de integração, para garantir que os fluxos estão funcionando corretamente.
+
+# Organização no Jira 📋
+
+Para aproveitar melhor o desenvolvimento e estar situado de tudo que eu precisava fazer, eu criei um quadro de KANBAN no Jira, e lá eu organizei tudo que eu precisava fazer, e o que eu já tinha feito.
+
+Se fossemos escalar o projeto, certamente seria ideal usar **SCRUM**, não com todas as regras, mas com o necessário para agilidade.
+
+Da uma olhadinha:
+![Jira](https://i.imgur.com/eLIB5JY.png)
