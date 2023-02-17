@@ -15,7 +15,7 @@ Você pode visualizar o projeto na [Vercel](https://digitalr-code-interview.verc
 
 ## 📝 Sobre o projeto
 
-Veja meu [vídeo de introdução](https://www.youtube.com/watch?v=cRIQ4bvO9B0)!
+## Veja meu [vídeo de introdução](https://www.youtube.com/watch?v=cRIQ4bvO9B0)!
 
 O projeto foi desenvolvido com **ReactJS** e **Typescript** com **Vite**, todos os componentes e estilos foram criados por mim, para animações eu utilizei a biblioteca **Framer Motion**, para gerenciamento dos forms usei o **React Hook Form**.
 

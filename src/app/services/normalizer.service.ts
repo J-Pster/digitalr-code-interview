@@ -4,14 +4,14 @@ interface FormatNormalizer {
 }
 
 const formats: { [key: string]: string } = {
-  square: "m²",
-  liter: "L",
-  ml: "ml",
+  square: 'm²',
+  liter: 'L',
+  ml: 'ml'
 };
 
 const valueCalcs: { [key: string]: string } = {
-  ml: "(value * 1000).toFixed(0)",
-  liter: "value.toFixed(2)",
+  ml: '(value * 1000).toFixed(0)',
+  liter: 'value.toFixed(2)'
 };
 
 const resultValueNormalizer = (result: FormatNormalizer): string => {

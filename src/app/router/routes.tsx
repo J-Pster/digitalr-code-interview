@@ -1,23 +1,23 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 
-import App from "../App";
-import { Error } from "../pages";
-import { Calculadoras } from "../pages/calculadoras";
+import App from '../App';
+import { Error } from '../pages';
+import { Calculadoras } from '../pages/calculadoras';
 
-import { calculadorasRoutes } from "./calculadoras";
+import { calculadorasRoutes } from './calculadoras';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
-    errorElement: <Error />,
+    errorElement: <Error />
   },
   // Calculadoras
   {
-    path: "/calculadoras",
-    element: <Calculadoras />,
+    path: '/calculadoras',
+    element: <Calculadoras />
   },
-  ...calculadorasRoutes,
+  ...calculadorasRoutes
 ]);
 
 export default router;

@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { Result } from "src/data/calculadoras/result/tinta.result";
-import { resultFormatNormalizer } from "../../../../../services/normalizer.service";
+import { ResultInterface } from 'src/data/calculadoras/result/tinta.result';
+import { resultFormatNormalizer } from '../../../../../services/normalizer.service';
 
-import "./results.scss";
+import './results.scss';
 
 interface TintaProps {
   calculus: any;
-  result: Result;
+  result: ResultInterface;
 }
 
 const generateBucketImages = (number: number, id: string) => {
@@ -18,7 +18,7 @@ const generateBucketImages = (number: number, id: string) => {
         key={i}
         src={`/ink-bkt-${id}.png`}
         alt="Tinta"
-        style={{ width: "25px", height: "25px" }}
+        style={{ width: '25px', height: '25px' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: i * 0.2 }}
@@ -36,16 +36,14 @@ const tinta = ({ calculus, result }: TintaProps) => {
           key={result.id}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+          transition={{ duration: 0.6 }}>
           <h3>{result.titulo}</h3>
           <div id="result">
-            {result.format === "ink-bkt" &&
-              generateBucketImages(calculus[result.id], result.id)}
+            {result.format === 'ink-bkt' && generateBucketImages(calculus[result.id], result.id)}
             <p>
               {resultFormatNormalizer({
                 value: calculus[result.id],
-                format: result.format,
+                format: result.format
               })}
             </p>
           </div>

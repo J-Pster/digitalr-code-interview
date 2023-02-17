@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { Result } from "src/data/calculadoras/result/tinta.result";
-import { resultFormatNormalizer } from "../../../../../services/normalizer.service";
+import { ResultInterface } from 'src/data/calculadoras/result/tinta.result';
+import { resultFormatNormalizer } from '../../../../../services/normalizer.service';
 
-import "./fields.scss";
+import './fields.scss';
 
 interface StandardProps {
   calculus: any;
-  result: Result;
+  result: ResultInterface;
 }
 
 const standard = ({ calculus, result }: StandardProps) => {
@@ -19,13 +19,12 @@ const standard = ({ calculus, result }: StandardProps) => {
             key={field.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
+            transition={{ duration: 0.5, delay: index * 0.2 }}>
             <h3>{field.titulo}</h3>
             <p>
               {resultFormatNormalizer({
                 value: calculus[field.id].toFixed(2),
-                format: field.format,
+                format: field.format
               })}
             </p>
           </motion.div>

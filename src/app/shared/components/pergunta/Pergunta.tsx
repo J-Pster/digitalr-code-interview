@@ -1,6 +1,6 @@
-import { Pergunta } from "src/app/types/Pergunta.type";
-import Formats from "./formats";
-import "./Pergunta.scss";
+import { Pergunta } from 'src/app/types/Pergunta.type';
+import Formats from './formats';
+import './Pergunta.scss';
 
 interface PerguntaProps {
   step: number;
@@ -20,10 +20,10 @@ const Pergunta = ({
   pergunta,
   step,
   buttonText,
-  hooks: { register, watch, errors, getValues, setValue, handleOkay },
+  hooks: { register, watch, errors, getValues, setValue, handleOkay }
 }: PerguntaProps) => {
   const handleKeyDown = (e: any) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       handleOkay();
     }
   };
@@ -36,7 +36,7 @@ const Pergunta = ({
       {Formats[pergunta.format] ? (
         Formats[pergunta.format]({
           pergunta,
-          hooks: { register, errors, watch, getValues, setValue },
+          hooks: { register, errors, watch, getValues, setValue }
         })
       ) : (
         <div>Formato não suportado!</div>

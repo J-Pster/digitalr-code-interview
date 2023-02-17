@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-import "./Home.scss";
+import './Home.scss';
 
 const Home = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/calculadoras");
+    navigate('/calculadoras');
   };
 
   return (
@@ -22,14 +22,9 @@ const Home = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         drag="x"
-        dragConstraints={{ left: -100, right: 100 }}
-      >
+        dragConstraints={{ left: -100, right: 100 }}>
         <picture>
-          <source
-            className="logo"
-            srcSet="Ink-Branca.png"
-            media="(prefers-color-scheme: dark)"
-          />
+          <source className="logo" srcSet="Ink-Branca.png" media="(prefers-color-scheme: dark)" />
           <img
             className="logo"
             src="Ink-Preta.png"
@@ -40,8 +35,7 @@ const Home = () => {
       <motion.div
         className="text-container"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 1.5, delay: 2 } }}
-      >
+        animate={{ opacity: 1, transition: { duration: 1.5, delay: 2 } }}>
         <p>Arraste o icone, e depois clique duas vezes :)</p>
       </motion.div>
     </>

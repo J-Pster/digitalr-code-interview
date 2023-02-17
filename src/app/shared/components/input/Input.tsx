@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { InputProps } from "../../../types/Input.type";
+import { InputProps } from '../../../types/Input.type';
 
-import "./Input.scss";
+import './Input.scss';
 
 const Input = ({
   placeholder,
@@ -11,7 +10,7 @@ const Input = ({
   style,
   suffix,
   showErrors,
-  label,
+  label
 }: InputProps) => {
   console.warn(errors);
 
@@ -34,12 +33,12 @@ const Input = ({
 };
 
 Input.defaultProps = {
-  placeholder: "Escreva a resposta aqui...",
+  placeholder: 'Escreva a resposta aqui...',
   style: {},
-  suffix: "",
+  suffix: '',
   vals: {},
   showErrors: true,
-  label: "",
+  label: ''
 };
 
 export default Input;

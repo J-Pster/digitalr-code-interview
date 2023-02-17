@@ -1,20 +1,20 @@
-import { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { useLocation } from "react-router-dom";
-import { Pergunta } from "../../shared/components";
+import { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { useLocation } from 'react-router-dom';
+import { Pergunta } from '../../shared/components';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import "./Form.scss";
+import './Form.scss';
 
-import { Calculadora, calculadoras } from "../../../data/calculadoras";
-import { Result } from "../../shared/components";
+import { Calculadora, calculadoras } from '../../../data/calculadoras';
+import { Result } from '../../shared/components';
 
 const Form = () => {
   // Router
   const location = useLocation();
   const { pathname } = location;
-  const path = pathname.split("/")[2];
+  const path = pathname.split('/')[2];
 
   // Use Effect State Load
   const [step, setStep] = useState(0);
@@ -35,9 +35,9 @@ const Form = () => {
     trigger,
     getValues,
     setValue,
-    formState: { errors },
+    formState: { errors }
   } = useForm({
-    mode: "onChange",
+    mode: 'onChange'
   });
   const onSubmit = (data: any) => {
     console.table(data);
@@ -52,11 +52,7 @@ const Form = () => {
   if (showResult)
     return (
       <div>
-        <Result
-          calcs={formSelected.calcs}
-          result={formSelected.result}
-          form={formValues}
-        />
+        <Result calcs={formSelected.calcs} result={formSelected.result} form={formValues} />
       </div>
     );
 
@@ -80,18 +76,13 @@ const Form = () => {
   };
 
   return (
-    <motion.div
-      key={step}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.div key={step} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <Pergunta
         key={steps[step].id}
         pergunta={steps[step]}
         hooks={{ register, watch, getValues, setValue, errors, handleOkay }}
         step={step}
-        buttonText={step === maxStep ? "Calcular 🔣" : "Próximo ✔️"}
+        buttonText={step === maxStep ? 'Calcular 🔣' : 'Próximo ✔️'}
       />
     </motion.div>
   );

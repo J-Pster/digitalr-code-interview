@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import "./CaixaDeCalculos.scss";
+import { useNavigate } from 'react-router-dom';
+import './CaixaDeCalculos.scss';
 
 interface CaixaDeCalculosProps {
   titulo: string;

@@ -1,18 +1,18 @@
-import { useEffect, useCallback, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useCallback, useState } from 'react';
+import { motion } from 'framer-motion';
 
-import { Calc } from "src/data/calculadoras/calcs/tinta.calcs";
-import { Result } from "src/data/calculadoras/result/tinta.result";
+import { Calc } from 'src/data/calculadoras/calcs/tinta.calcs';
+import { ResultInterface } from 'src/data/calculadoras/result/tinta.result';
 
-import FieldsFormats from "./formats/fields";
-import ResultsFormats from "./formats/results";
+import FieldsFormats from './formats/fields';
+import ResultsFormats from './formats/results';
 
-import calculadoraService from "../../../services/calculadoras.service";
-import { useNavigate } from "react-router-dom";
+import calculadoraService from '../../../services/calculadoras.service';
+import { useNavigate } from 'react-router-dom';
 
 interface ResultProps {
   calcs: Calc[];
-  result: Result;
+  result: ResultInterface;
   form: any;
 }
 
@@ -21,14 +21,14 @@ const Result = ({ calcs, result, form }: ResultProps) => {
   const navigate = useNavigate();
 
   const handleBack = () => {
-    navigate("/calculadoras");
+    navigate('/calculadoras');
   };
 
   const calculateValues = useCallback(() => {
     const { calculateValues } = calculadoraService;
     const result = calculateValues(calcs, form);
     setCalculus(result);
-    console.table("Calculus result", calculus);
+    console.table('Calculus result', calculus);
   }, [calcs, form]);
 
   useEffect(() => {
@@ -38,11 +38,7 @@ const Result = ({ calcs, result, form }: ResultProps) => {
   if (!calculus) return <div>Carregando...</div>;
 
   return (
-    <motion.div
-      className="result"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-    >
+    <motion.div className="result" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <h2>{result.titulo}</h2>
       {FieldsFormats[result.fieldType] ? (
         FieldsFormats[result.fieldType]({ calculus, result })

@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import "./Select.scss";
-import { RegisterOptions } from "react-hook-form";
+import { useState, useEffect } from 'react';
+import './Select.scss';
+import { RegisterOptions } from 'react-hook-form';
 
 interface SelectProps {
   label: string;
@@ -15,13 +15,7 @@ interface SelectProps {
   vals: RegisterOptions;
 }
 
-const Select = ({
-  label,
-  options,
-  hooks: { register, errors, setValue: set },
-  id,
-  vals,
-}: SelectProps) => {
+const Select = ({ label, options, hooks: { register, setValue: set }, id, vals }: SelectProps) => {
   const [value, setValue] = useState(1);
 
   useEffect(() => {
@@ -52,9 +46,9 @@ const Select = ({
 };
 
 Select.defaultProps = {
-  label: "",
+  label: '',
   options: [],
-  onChange: () => {},
+  onChange: () => {}
 };
 
 export default Select;
